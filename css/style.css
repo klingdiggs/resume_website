@@ -1,11 +1,7 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 *, html {
 	box-sizing:  border-box;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	overflow: scroll;
 }
 
 body{
@@ -19,7 +15,7 @@ body{
 .grid {
 	display: grid;
 	position: absolute;
-	width: 98.5vw;
+	width: 100vw;
 	grid-gap: 5px;
 	grid-template-columns: repeat( 12, 1fr );
 	grid-template-rows: 100px auto auto;
@@ -30,12 +26,13 @@ body{
 
 .sub-grid{
 	display: grid;
-	position: relative;
+	position: absolute;
 	grid-gap: 10px;
 	width: 100%;
-	grid-template-columns: repeat( 5, 1fr);
+	grid-template-columns: 1fr 3fr;
 	grid-template-rows: auto auto auto;
-	max-height: 100vh;
+	height: 150vh;
+	max-height: 100%;
 }
 
 
@@ -100,7 +97,6 @@ a:hover {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 10;
 	background-color: white;
-	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
 .dropdown:hover .dropdown-content {
@@ -115,28 +111,27 @@ a:hover {
     font-size: 16px;
 	border: none;
 	background-color: white;
-	grid-column: 1 / span 3;
+	grid-column: 1 / 2;
 	width: 100%;
 }
 
 .side {
 	position: relative;
-
 } 
 
 .sidecontent{
-    display: none;
+	display: inline-block;
+	grid-column: 2 / 3;
 	position: absolute;
 	text-align: left;
+	min-width: 600px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 10;
 	background-color: white;
-	grid-column: 4 / span 8;
-	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
-.sidebtn button:hover + .sideontent {
+#edubtn:hover + #edu {
 	display: block;
-
 }
 
 .inline-block li{
