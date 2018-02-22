@@ -18,7 +18,7 @@ body{
 	width: 100vw;
 	grid-gap: 5px;
 	grid-template-columns: repeat( 12, 1fr );
-	grid-template-rows: 100px auto auto;
+	grid-template-rows: 250px  auto 200px;
 	/*background-color: orange;*/
 	height: 150vh;
 	max-height: 100%;
@@ -30,11 +30,10 @@ body{
 	grid-gap: 10px;
 	width: 100%;
 	grid-template-columns: 1fr 3fr;
-	grid-template-rows: auto auto auto;
+	/*grid-template-rows: repeat( 5, 1fr);*/
 	height: 150vh;
 	max-height: 100%;
 }
-
 
 /*Tag Elemments*/
 h1, h2 {
@@ -51,10 +50,6 @@ ul {
 	display: inline;
 }
 
-h3 {
-	display: inline;
-}
-
 a:link {
 	color: black;
 	text-decoration:  none;
@@ -67,8 +62,6 @@ a:visited {
 a:hover {
 	color: black;
 }
-
-
 
 .orange{
 	background: orange;
@@ -120,24 +113,38 @@ a:hover {
 } 
 
 .sidecontent{
-	display: inline-block;
-	grid-column: 2 / 3;
+	display: none;
+	grid-area: 1 / 2 / 6 / 3;
 	position: absolute;
-	text-align: left;
+	vertical-align: center;
 	min-width: 600px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 10;
 	background-color: white;
 }
 
-#edubtn:hover + #edu {
+#eduBtn:hover + #edu {
+	display: block;
+}
+
+#patentBtn:hover + #patent {
+	display: block;
+}
+
+#skillsBtn:hover + #skills {
+	display: block;
+}
+
+#achievementBtn:hover + #achievement {
+	display: block;
+}
+
+#projectBtn:hover + #project {
 	display: block;
 }
 
 .inline-block li{
 	display: inline-block;
 }
-
 
 .col-1{
 	grid-column-start: 1;
@@ -214,9 +221,7 @@ a:hover {
 }
 
 .row2{
-	grid-row: 2 / span 1;
-	background-color: yellow;
-	
+	grid-row: 2 / span 1;	
 }
 
 .row1{
@@ -243,6 +248,9 @@ a:hover {
 	z-index: 10;
 }	
 
+.name ul{
+	padding-left: 0;
+}
 .interests ul{
 	padding-left: 0;
 }
@@ -274,17 +282,6 @@ a:hover {
 	text-align: left;
 }
 
-/*
-.banner{
-	position: fixed;
-}
-
-.banner img{
-	width: 100vw;
-	height: auto;
-	/*opacity: .5;
-}*/
-
 .relative{
 	position:relative;
 }
@@ -312,7 +309,6 @@ a:hover {
 .indent li{
 	display: block;
 	list-style-type: circle;
-
 }
 
 .rTable { 
